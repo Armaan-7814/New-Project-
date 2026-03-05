@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row mt-5">
+            div class="col-md-6 offset-md-3">
+                <form action="login" method="POST">
+                        {% csrf_token %}
+                    <div class="mt-2">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control"   required placeholder="Enter your email"/>
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" required placeholder="Enter your password"/>
+                        <div class="mt-2">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <a href="newuser" class="mt-4">Create an account</a>
+                            
+                    </div>
+                </form>
+
+        </div>
+
+    </div>
+{% endblock %}
